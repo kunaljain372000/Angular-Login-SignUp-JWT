@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Login</h1>
+          <h6>Please enter email & password !!</h6>
+        </div>
+        <form [formGroup]="loginForm"  #login="ngForm"  (ngSubmit)="userlogin()">
+          <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label">Email address</label>
+            <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div *ngIf="loginForm.get('email')!.invalid && (loginForm.get('email')!.dirty || loginForm.get('email')!.touched)" class="text-danger">Invalid email</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <div class="input-group">
+              <input formControlName="password" [type]="passwordVisible ? 'text' : 'password'" class="form-control" id="exampleInputPassword1">
+              <span [class.fa-eye]="passwordVisible" (click)="togglePasswordVisibility()">
+                <!-- <i class="fa" [class.fa-eye]="passwordVisible"></i> -->
+              </span>
+            </div>
+            <div *ngIf="loginForm.get('password')!.invalid && (loginForm.get('password')!.dirty || loginForm.get('password')!.touched)" class="text-danger">Password is required</div>
+          </div>
+          <button type="submit" (click)="onSubmit()" [disabled]="loginForm.invalid" class="btn btn-primary">Login
+          </button>
+        </form>
+        <a style="color: #fff; margin-top: 10px" routerLink="/signup">New user? Click to Signup!!</a>
+      </div>
+    </div>
+  </div>
+</div>

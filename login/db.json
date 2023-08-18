@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": null,
+      "lastName": null,
+      "email": null,
+      "mobile": null,
+      "salary": null
+    },
+    {
+      "id": 2,
+      "firstName": null,
+      "lastName": null,
+      "email": null,
+      "mobile": null,
+      "salary": null
+    }
+  ],
+  "signupUsers": [
+    {
+      "emailId": "tejesh12@gmail.com",
+      "password": "teja1234",
+      "confirmPassword": "teja1234",
+      "phone": "8989976263",
+      "id": 1
+    },
+    {
+      "emailId": "tejesh12@gmail.com",
+      "password": "teja1234",
+      "confirmPassword": "teja1234",
+      "phone": "8989976263",
+      "id": 2
+    }
+  ]
+}
